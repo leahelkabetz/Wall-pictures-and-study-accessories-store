@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project LEA & TZIPIK</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../products/icon.png">
+</head>
+
+<body>
+    <header>
+<img src="../products/icon.png" id="logo">
+    </header>
+    <div id="pageContainer">
+        <img class="Anmation" id="vAnmation" src="../anmation/Animation - 1722389907596.gif" alt="vAnmation"
+            style="display: none;">
+        <img class="Anmation" id="PasAnmation" src="../anmation/Animation - 1722390060790.gif" alt="PasAnmation"
+            style="display: none;">
+        <template>
+            <div class="page active" id="logIn">
+                <form action="" id="logInForm">
+                    <input type="text" id="nameInput" name="name" placeholder="Name" required>
+                    <input type="email" id="emailInput" name="email" placeholder="Email" required>
+                    <button type="submit">Log In</button>
+                </form>
+                <div id="logInMassage"></div>
+
+                <button id="notMember" type="button" onclick="changPage('signUp')" style="display: none;">not member
+                    yet</button>
+                <div id="container"></div>
+                <div id="details"></div>
+            </div>
+
+        </template>
+        <template>
+            <div class="page" id="signUp">
+
+                <form action="" id="signUpForm">
+                    <input type="text" id="nameInput" name="name" placeholder="Name" required>
+                    <input type="email" id="emailInput" name="email" placeholder="Email" required>
+                    <input type="text" id="phoneInput" name="phone" placeholder="Phone">
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div id="errorDiv"></div>
+            </div>
+
+        </template>
+
+        <template>
+            <div class="page" id="admin">
+                <button type="button" onclick="changPage('logIn')">Log Out</button>
+                <h1>Products Management App</h1>
+                <form id="productsForm">
+
+                    <input type="text" id="nameInput" name="name" placeholder="Name" required>
+                    <input type="text" id="priceInput" name="price" placeholder="Price" required>
+                    <input type="text" id="imageInput" name="imageUrl" placeholder="Image Url">
+                    <button type="submit">Add Products</button>
+                </form>
+                <div id="productsListAdmin"></div>
+                <div id="message"></div>
+                <div id="editProductSection" style="display: none;">
+                    <h2>Edit Products</h2>
+                    <form id="editProductsForm">
+                        <input type="text" id="editNameInput" name="name" placeholder="Name" required>
+                        <input type="price" id="editPriceInput" name="price" placeholder="Price" required>
+                        <input type="text" id="editImageInput" name="imageUrl" placeholder="Image Url">
+                        <button type="submit">Save Changes</button>
+                        <button type="button" onclick="changPage('products')">Cancel</button>
+                    </form>
+                </div>
+
+            </div>
+        </template>
+        <template>
+            <div class="page" id="products">
+                <button type="button" onclick="changPage('logIn')">Log Out</button>
+                <button type="button" onclick="goToCarts()"><img class="shoppingCarts_"
+                        src="https://cdn-icons-png.flaticon.com/128/14324/14324288.png" alt="shoppingCarts"></button>
+                <h1>Products List</h1>
+                
+
+                <div id="productsList"></div>
+            </div>
+
+        </template>
+
+        <template>
+            <div class="page" id="shoppingCarts">
+                <button type="button" onclick="changPage('logIn')">Log Out</button>
+                <button type="button" onclick="changPage('products')"><img class="shoppingCarts_"
+                        src="https://cdn-icons-png.flaticon.com/128/9018/9018922.png" alt="shopping"></button>
+                        <h1>Shopping Carts</h1>
+
+                <div id="productsShoppingCarts"></div>
+                <div id="errorDiv"></div>
+
+            </div>
+        </template>
+    </div>
+
+    <footer>
+
+    </footer>
+    <script src="../script/script.js"></script>
+    <script src="../script/log.js"></script>
+    <script src="../script/sign.js"></script>
+    <script src="../script/product.js"></script>
+    <script src="../script/shoppingCarts.js"></script>
+    <!-- <script src="../script/product.js"></script> -->
+    <script src="../script/admin.js"></script>
+
+
+</body>
+
+</html>
