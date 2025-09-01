@@ -66,4 +66,3 @@ Shows all items the user added:
 
 ---
 
-## Folder Structure (Example)
